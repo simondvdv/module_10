@@ -35,7 +35,3 @@ thr_third.join()
 thr_fourth.join()
 time_end = datetime.now()
 print(time_end - time_start)
-
-
-
-
