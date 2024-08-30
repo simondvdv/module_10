@@ -44,10 +44,10 @@ class Cafe:
                     print(f'{i.guest} покушал(-а) и ушёл(ушла)')
                     print(f'Стол номер {i.number} свободен')
                     i.guest = None
-                    if not self.queue.empty() and any(i.guest is None for i in self.tables):
-                        next_guest = self.queue.get()
-                        print(f'{next_guest.name} имя гостя из очереди> вышел(-ла) из очереди и сел(-а) за стол номер {i.number}')
-                        next_guest.start()
+                if not self.queue.empty() and any(i.guest is None for i in self.tables):
+                    next_guest = self.queue.get()
+                    print(f'{next_guest.name} имя гостя из очереди> вышел(-ла) из очереди и сел(-а) за стол номер {i.number}')
+                    next_guest.start()
 
 
 # Создание столов
